@@ -1,0 +1,32 @@
+$small-screen: 576px;
+$medium-screen: 768px;
+$large-screen: 992px;
+$extra-large-screen: 1224px;
+
+@mixin respond-to-extra-large {
+  @media (max-width: $extra-large-screen) {
+    @content;
+  }
+}
+@mixin respond-to-large {
+  @media (max-width: $large-screen) {
+    @content;
+  }
+}
+@mixin respond-to-medium {
+  @media (max-width: $medium-screen) {
+    @content;
+  }
+}
+@mixin respond-to-small {
+  @media (max-width: $small-screen) {
+    @content;
+  }
+}
+
+@mixin flexbox($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
